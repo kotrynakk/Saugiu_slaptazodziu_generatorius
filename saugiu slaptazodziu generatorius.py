@@ -6,26 +6,6 @@ print('Sveiki atvyke i saugiu slaptazodziu generatoriu!')
 
 length = int(input('\nIveskite skaitmeni, keliu simboliu slaptazodzio noretumete(minimaliai keturi skaitmenys):  '))
 
-"""
-while True:
-    length = int(input('\nIveskite skaitmeni, keliu simboliu slaptazodzio noretumete(minimaliai keturi skaitmenys):  '))
-
-    if length < 4:
-        print("Iveskite didesni skaitmeni, nei 4")
-"""
-length = int(input('\nIveskite skaitmeni, keliu simboliu slaptazodzio noretumete(minimaliai keturi skaitmenys):  '))
-
-while True:
-        length = int(input('\nIveskite skaitmeni, keliu simboliu slaptazodzio noretumete(minimaliai keturi skaitmenys):  '))
-        if length in ('Iveskite skaitmeni, keliu simboliu slaptazodzio noretumete(minimaliai keturi skaitmenys):  ')
-            break
-        print("invalid input.")
-    if length < 4:
-        continue
-    else:
-        print("Iveskite ilgesni slaptazodi")
-        break
-
 mazosios = string.ascii_lowercase
 didziosios = string.ascii_uppercase
 skaiciai = string.digits
@@ -36,8 +16,10 @@ all = mazosios + didziosios + skaiciai + simboliai
 
 temp = random.sample(all,length)
 
-password = "".join(temp)
+if length < 4:
+        print("Iveskite ilgesni slaptazodi")
+elif length > 4:
+    password = "".join(temp)
+    print(password)
 
-
-
-print(password)
+print("end of program")
