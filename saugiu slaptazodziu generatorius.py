@@ -20,6 +20,6 @@ if length < 4:
         print("Iveskite ilgesni slaptazodi")
 elif length > 4:
     password = "".join(temp)
-    print(password)
+    print("Jusu saugus slaptazodis yra " + password)
 
 print("end of program")
