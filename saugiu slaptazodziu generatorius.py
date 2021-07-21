@@ -12,9 +12,9 @@ skaiciai = string.digits
 simboliai = string.punctuation
 
 
-all = mazosios + didziosios + skaiciai + simboliai
+pirmas = mazosios + didziosios + skaiciai + simboliai
 
-temp = random.sample(all,length)
+temp = random.sample(pirmas,length)
 
 if length < 4:
         print("Iveskite ilgesni slaptazodi")
